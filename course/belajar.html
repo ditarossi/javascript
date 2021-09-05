@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--<script type="text/javascript" src="belajar.js"></script>-->
+
+</head>
+<body>
+	<h1>Belajar Javascript</h1>
+
+	<div id="nama"></div>	
+    <br/>
+    <div id="alamat"></div>	
+    <br/>
+    <div id="kali"></div>
+    <br/>
+    <div id="tambah"></div>
+    <br/>
+    <div id="angkake2"></div>
+    <br/>
+    <div id="hasil"></div>
+    <br/>
+    <!--Challenge angka 10-50-->
+    <button onclick="perulangan()">perulangan</button>	
+    <br/>
+	<div id="jawaban"></div>
+    <br/>
+    <!--Challenge Ganjil Genap-->
+    <button onclick="percabangan()">ganjil</button>	
+    <br/>
+    <div id="ganjil"></div>
+    <br/>
+    <button onclick="percabangan()">genap</button>	
+    <br/>
+    <div id="genap"></div>
+    <br/>
+    <!--Challenge replace string-->
+    <div id="ganti"></div>
+    <br/>
+
+	<script>
+		document.getElementById("nama").innerHTML = "Dita Rossiyana";	
+
+        var alamat = "Boyolali";
+        document.getElementById("alamat").innerHTML = alamat;
+
+        var bil1 = 2;
+        var bil2 = 3;
+        var penjumlahan = bil1+bil2;
+        var perkalian = bil1*bil2;
+        document.getElementById("tambah").innerHTML = penjumlahan;
+        document.getElementById("kali").innerHTML = perkalian;
+
+        var angka=['1', '3', '5', '7'];
+        document.getElementById("angkake2").innerHTML = angka[1];
+
+        var biodata = {
+            Nama : "Dita Rossiyana",
+            Usia : 18,
+            Asal : "Boyolali"
+        };
+        document.getElementById("hasil").innerHTML = "Nama saya " + biodata.Nama + " Saya Berusia " + biodata.Usia + " Asal Saya " + biodata.Asal;
+
+        //====Challenge angka 10-50===
+        function perulangan() {
+		  var text = "";
+		  var x;
+		  for (x = 10; x <= 50; x++) {
+		        text += "Angka " + x + "<br>";
+		  }
+		  document.getElementById("jawaban").innerHTML = text;
+	    }
+
+        //====Challenge ganjil genap===
+        function percabangan(){
+            var angka = ['1','2','3','4','5','6','7','8'];
+            var genap = [];
+            var ganjil = [];
+            var x= 0;
+
+            for(x=0; x<=angka.length; x++){
+                if (angka[x] % 2 == 0) {
+                genap.push(angka[x]);
+                }else{
+                ganjil.push(angka[x]);
+                }
+            }
+            document.getElementById("ganjil").innerHTML = ganjil;
+            document.getElementById("genap").innerHTML = genap;
+        }
+
+        //====Challenge duplkat string
+        var kalimat = "belajar javascript ";   
+        document.getElementById("ganti").innerHTML = kalimat.repeat(2);
+
+	</script>
+</body>
+
+</html>

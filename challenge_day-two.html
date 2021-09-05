@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+	<h1>Belajar Javascript</h1>
+    <div id="soal_1"></div>
+    <!--Challenge angka 10-50-->
+    <button onclick="perulangan()">Show Number Between 10-50</button>	
+    <br/>
+	<div id="jawaban"></div>
+    <br/>
+
+    <div id="soal_2"></div>
+    <!--Challenge Ganjil Genap-->
+    <button onclick="percabangan()">Odd Number</button>	
+    <br/>
+    <div id="ganjil"></div>
+    <br/>
+    <button onclick="percabangan()">Even Number</button>	
+    <br/>
+    <div id="genap"></div>
+    <br/>
+
+    <div id="soal_3"></div>
+    <!--Challenge duplikat string-->
+    <div id="newbrand"></div>
+    <br/>
+
+    <div id="soal_4"></div>
+    <!--Challenge grade from score
+    <div id="grade"></div>
+    <br/>-->
+
+    <div id="soal_5"></div>
+    <!--Challenge FizzBuzz 
+    <div id="hasil"></div>
+    <br/>-->
+
+
+    <!--FIZZBUZZ NEW-->
+    <div id="jawaban"></div>
+    <br/>
+    
+
+	<script>
+	let satu = "Challenge 1";
+    document.getElementById("soal_1").innerHTML = satu;
+    let dua = "Challenge 2";
+    document.getElementById("soal_2").innerHTML = dua;
+    let tiga = "Challenge 3 ==> duplicate letter in sentence";
+    document.getElementById("soal_3").innerHTML = tiga;
+    let empat = "Challenge 4 ==> Grade from Score (console)";
+    document.getElementById("soal_4").innerHTML = empat;
+    let lima = "Challenge 5 ==> FizzBuzz (Console)";
+    document.getElementById("soal_5").innerHTML = lima;
+
+        //====Challenge angka 10-50===
+        function perulangan() {
+		  var text = "";
+		  var x;
+		  for (x = 10; x <= 50; x++) {
+		        text += "Angka " + x + "<br>";
+		  }
+		  document.getElementById("jawaban").innerHTML = text;
+	    }
+
+        //====Challenge ganjil genap===
+        function percabangan(){
+            var angka = ['1','2','3','4','5','6','7','8'];
+            var genap = [];
+            var ganjil = [];
+            var x= 0;
+
+            for(x=0; x<=angka.length; x++){
+                if (angka[x] % 2 == 0) {
+                genap.push(angka[x]);
+                }else{
+                ganjil.push(angka[x]);
+                }
+            }
+            document.getElementById("ganjil").innerHTML = ganjil;
+            document.getElementById("genap").innerHTML = genap;
+        }
+
+        //====Challenge duplkat string
+        const brand = ["Samsung", "HP", "Asus", "HP"];
+        let unik = [...new Set(brand)];
+        document.getElementById("newbrand").innerHTML = unik;
+
+        //====Grade From Score=====
+        //var score = ['76', '80', '78', '75', '90']
+        //document.getElementById("grade").innerHTML = score.sort();
+
+        const score= 79;
+        switch(true){
+            case score >= 90 :console.log("Sangat Biak");break;
+            case score >= 85 :console.log("Baik");break;
+            case score >= 75 :console.log("Kurang Baik");break;
+            default:console.log("Buruk");
+        }
+        
+        //====FizzBuzz=====
+        //var teks="";
+
+            for(i=1; i<=20; i++){
+                if((i%3==0)&&(i%5==0)){
+                     //teks = "FizzBuzz";
+                    //document.getElementById("FizzBuzz").innerHTML = FizzBuzz;
+                    console.log("FizzBuzz")
+                } else if (i%3==0){
+                     //teks = "Fizz";
+                    //document.getElementById("Fizz").innerHTML = Fizz;
+                    console.log("Fizz")
+                }else if (i%5==0){
+                     //teks = "Buzz";
+                    //document.getElementById("Buzz").innerHTML = Buzz;
+                    console.log("Buzz")
+                } else {
+                    //teks=i;
+                    //document.getElementById("Ori").innerHTML = i;
+                    console.log(i)
+                }
+            }
+        //document.getElementById("hasil").innerHTML =teks;
+	</script>
+</body>
+
+</html>

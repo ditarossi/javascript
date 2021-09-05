@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Akses Data Objek
+        let HP = {
+            brand : "Samsung", 
+            color : ["Black", "Gold"]
+        }
+        console.log(HP['brand']) //array notation
+        console.log(HP.color[0]) //dot notation
+
+        //merubah data di dalam sebuah objek
+        const laptop = {} //objek
+        const spek = laptop
+
+        spek.brand = "Asus"
+        spek.procecor = "core I5"
+        spek.HDD = "1TB"
+
+        console.log(laptop)
+        laptop.brand = "Acer" 
+        console.log(laptop)
+        laptop["brand"] = "Toshiba" //bisa juga pakai array notation
+        console.log(laptop)
+        
+    </script>
+</body>
+</html>

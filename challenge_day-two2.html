@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+	<h1>Belajar Javascript</h1>
+    <div id="soal_1"></div>
+    <!--Challenge angka 10-50
+    <button onclick="perulangan()">Show Number Between 10-50</button>	
+    <br/>
+	<div id="jawaban"></div>
+    <br/>-->
+
+    <div id="soal_2"></div>
+    <!--Challenge Ganjil Genap-->
+    <button onclick="percabangan()">Odd Number</button>	
+    <br/>
+    <div id="ganjil"></div>
+    <br/>
+    <button onclick="percabangan()">Even Number</button>	
+    <br/>
+    <div id="genap"></div>
+    <br/>
+
+    <div id="soal_3"></div>
+    <!--Challenge duplikat string-->
+    <div id="newbrand"></div>
+    <br/>
+
+    <div id="soal_4"></div>
+    <!--Challenge grade from score-->
+    <div id="grade"></div>
+    <br/>
+
+    <div id="soal_5"></div>
+    <!--Challenge FizzBuzz-->
+    <div id="hasil"></div>
+    <br/>
+   
+    
+
+	<script>
+	let satu = "First Challenge";
+    console.log(satu)
+    function perulangan() {
+		  var text = "";
+		  var x;
+		  for (x = 10; x <= 50; x++) {
+		        text += "Angka " + x + "<br>";
+		  } 
+          console.log(text)
+	    }
+        
+    let dua = "Second Challenge";
+    console.log(dua)
+    let tiga = "Third Challenge ==> duplicate letter in sentence";
+    console.log(tiga)
+    let empat = "Fourth Challenge ==> Grade from Score";
+    console.log(empat)
+    let lima = "Fifth Challenge ==> FizzBuzz";
+    console.log(lima)
+
+        //====Challenge angka 10-50===
+        
+
+        //====Challenge ganjil genap===
+        function percabangan(){
+            var angka = ['1','2','3','4','5','6','7','8'];
+            var genap = [];
+            var ganjil = [];
+            var x= 0;
+
+            for(x=0; x<=angka.length; x++){
+                if (angka[x] % 2 == 0) {
+                genap.push(angka[x]);
+                }else{
+                ganjil.push(angka[x]);
+                }
+            }
+            document.getElementById("ganjil").innerHTML = ganjil;
+            document.getElementById("genap").innerHTML = genap;
+        }
+
+        //====Challenge duplkat string
+        const brand = ["Samsung", "HP", "Asus", "HP"];
+        let unik = [...new Set(brand)];
+        document.getElementById("newbrand").innerHTML = unik;
+
+        //====Grade From Score=====
+        var score = ['76', '80', '78', '75', '90']
+        document.getElementById("grade").innerHTML = score.sort();
+
+        //====FizzBuzz=====
+        //var bilangan=['3','5', '6', '10', '9', '15']
+        //var FizzBuzz = "Fizzbuzz";
+        //var Fizz = "Fizz"
+        //var Buzz = "Buzz"
+        var teks="";
+
+        function FB(){
+            for(i=1; i<=20; i++){
+                if((i%3==0)&&(i%5==0)){
+                     //teks = "FizzBuzz";
+                    document.getElementById("FizzBuzz").innerHTML = FizzBuzz;
+                } else if (i%3==0){
+                     //teks = "Fizz";
+                    document.getElementById("Fizz").innerHTML = Fizz;
+                }else if (i%5==0){
+                     //teks = "Buzz";
+                    document.getElementById("Buzz").innerHTML = Buzz;
+                } else {
+                    document.getElementById("Ori").innerHTML = i;
+                }
+            }
+        }
+        document.getElementById("hasil").innerHTML = FB();
+	</script>
+</body>
+
+</html>

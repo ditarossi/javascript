@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //number
+        let angka = 1;
+        console.log(angka);
+
+        let hundred = new Number(100);
+        console.log(hundred);
+        console.log(hundred+angka);
+
+        //boolean dua nilai saja benar / salah
+        let isTrue = Boolean(true)
+        let On = true
+        let off = false
+
+        console.log(isTrue);
+        console.log(On == off);
+        console.log(On == On);
+        console.log(off == off);
+
+        //String deklarasi bisa menggunakan ('', ``, "", new String), tidak mempengaruhi hasil
+        let a = 'Hello'
+        let b = "Hello"
+        let c = `Hello`
+        let d = new String("Hello")
+
+        console.log(a);
+        console.log(b);
+        console.log(c);
+        console.log(d);
+        
+        //Manipulasi String
+        let depan = "   Dita    "
+        let belakang = "Rossiyana "
+        let nama = `${depan} ${belakang}`
+
+        console.log(nama.toUpperCase()); //huruf besar
+        console.log(nama.toLowerCase()); //huruf kecil
+
+        console.log(depan.trim()); //menghapus white space
+        console.log(depan.trimStart()); //menghapus white space
+        console.log(depan.trimEnd()); //menghapus white space
+
+        console.log(belakang.repeat(2)); //duplikat
+
+        //null an undefind (mendeklarasikan variable tapi tidak ada result di dalamnya)
+        //array
+        const genap = [2,4,6,8]
+        const alat = ["meja","kursi", "almari", "kasur"]
+
+        console.log(genap)
+        console.log(alat)
+
+        //objek
+        var biodata = {
+            Nama : "Dita Rossiyana",
+            Usia : 18,
+            Asal : "Boyolali"
+        };
+        console.log(biodata)
+
+    </script>
+</body>
+</html>

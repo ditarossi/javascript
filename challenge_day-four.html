@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //====Challenge Mengubah Array menjadi Objek====
+        const baju = {}
+        const karakteristik = baju
+
+        karakteristik.warna = ["Hitam", "Putih", "Maroon"]
+        karakteristik.bahan = ["Rayon", "Katun"]
+        karakteristik.size = ["S", "M", "L"]
+
+        console.log(baju)
+
+        //====Challenge Play with JSON====
+        let sepatu = { //membuat objek
+            warna : "Hitam",
+            size : "37",
+            brand : ["Airwalk", "Vans"]         
+        }
+
+        console.log(sepatu)
+        console.log(sepatu.warna) //output berdasarkan warna
+        console.log(sepatu.size) //output berdasarkan size
+        console.log(sepatu.brand[1]) //output berdasarkan brand sesuai index
+
+        //====Challenge Filter Number from Given Input to Leap Years Number====
+        let leap = function(year){
+            //let year;
+            if((0 == year % 4) && (!0 == year % 100) || (0 == year % 400)){
+                console.log("is a leap year")
+            } else {
+                console.log("is'nt a leap year")
+            }
+        }
+       leap(2016)
+
+       //====Challenge Transform Item Numbers to (even, odd, numbers multiplies by 5, prime numbers, prime numbers less than 100)====
+       let cek = function(bil){
+           //cek ganjil genap
+            if(bil % 2 == 0){
+                console.log("genap")
+            } else {
+                console.log("ganjil")
+            }
+            //multiplies
+            let kali = bil * 5
+            console.log(kali)
+            return bil
+            //prime number
+            for(let i = 2; i<= bil; i++){
+                if(bil % i == 0){
+                    console.log("Not Prime Number")
+                } 
+            } console.log("Prime Number")
+        }
+            
+        cek(3)
+    </script>
+</body>
+</html>
+

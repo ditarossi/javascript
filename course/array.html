@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //akses data dalam array
+        const brand = ["Samsung", "HP", "Asus", "Acer"]
+
+        console.log(brand)
+        console.log(brand[0])
+        console.log(brand[1])
+        console.log(brand[2])
+        console.log(brand[3])
+
+        //mengubah data dalam array
+        const kota = ["Jakarta", "Bandung", "Surabaya"]
+        console.log(kota) //before
+        kota[0]='Semarang'
+        console.log(kota) //after
+
+        //menghapus data array akhir
+        const buah = ["Apel", "Mangga", "Semangka"]
+        console.log(buah) //before
+        buah.pop() //digunakan untuk mengambil data terakhir
+        console.log(buah)
+
+        const sayur = ["wortel", "cabai", "sawi"]
+        const sayurTerakhir = sayur.pop()
+        console.log(sayurTerakhir)
+
+        //menghapus data array awal
+        const sekolah = ["buku", "tas", "pensil"]
+        console.log(sekolah) //before
+        sekolah.shift() //digunakan untuk mengambil data awal
+        console.log(sekolah) //after
+
+        const rumah = ["kompor", "lampu", "televisi"]
+        const rumahAwal = rumah.shift()
+        console.log(rumahAwal)
+
+        //menambah data array
+        const furnitur = ["Meja"]
+        console.log(furnitur)
+
+        furnitur.unshift("Kursi") //tambah array depan
+        const awal = furnitur.unshift("Jendela") //menampilkan angka jumlah array
+        console.log(awal)
+        furnitur.push("Lemari") //tambah array belakang
+        const akhir = furnitur.push("Pintu") //menampilkan angka jumlah array
+        console.log(akhir)
+        //console.log(furnitur)
+
+        //mengubah string menjadi array
+        const arraySekolah = Array.from("Sekolah") //penggunaan array from
+        console.log(arraySekolah)
+
+        const arrayGitar = "Gitar".split("")
+        console.log(arrayGitar) //penggunaan split
+
+        //mencari data dalam array
+        let x = [3,2,4,6,5,1,8,7]
+        let warna = ["Merah", "Kuning", "Hijau"]
+        console.log(x.includes(9)) //false
+        console.log(warna.includes("Kuning")) //true
+        //mengurutkan data dalam sebuah array
+        console.log(x.sort()) //x
+        console.log(warna.sort())
+        //array slice, mengambil data dalam sebuah array
+        let warnaSlice = warna.slice(1)
+        console.log(warnaSlice)
+        //array reverse, membalikkan data
+        let warna2 = warna.reverse()
+        console.log(warna2)
+
+
+
+    </script>
+</body>
+</html>

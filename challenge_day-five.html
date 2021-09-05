@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //====Challenge Class
+        class Vehicle {
+            constructor(brand, color, size){
+                this.brand = brand
+                this.color = color
+                this.size = size
+            }
+            getDetails(){
+                console.log(this.brand)
+                console.log(this.color)
+                console.log(this.size)
+            }
+        }
+
+        //object
+        let sepatu = new Vehicle("Nike", "Red", 40)
+
+        console.log(sepatu.brand)
+        console.log(sepatu.color)
+        console.log(sepatu.size)
+
+        console.log(sepatu.getDetails())
+
+        //====Challenge Encapsulation, ketika properti dan function berada dalam satu proses
+        class Laptop{
+            constructor(brand, spek){
+                this.brand = brand
+                this.spek = spek
+            }
+            ukuran(size){
+                this.size = size
+            }
+            getFunction(){
+                console.log(this.brand)
+                console.log(this.spek)
+                console.log(this.size)
+            }
+        }
+
+        let aa = new Laptop("Asus", "Procesor core I5")
+        aa.ukuran("15 inch")
+        aa.getFunction()
+
+
+        //====Challenge Inheritance, properti dan function suatu objek yang digunakan objek lain
+        class manusia{
+            parameter(nama){
+                this.nama = nama
+            }
+            getNama(){
+                console.log(nama)
+            }
+        }
+
+        class manusia2 extends manusia{
+            parameter(nama, NIK){
+                this.nama = nama
+                this.NIK = NIK
+            }
+            getNama(){
+                console.log(super.getNama())
+                console.log(NIK)
+            }
+        }
+
+        let mhs = new manusia2("Dita", "390823902")
+        console.log(mhs)
+
+        //==== Challenge Abstraction
+        function mahasiswa(){
+            this.NIM = NIM
+            console.log("error")
+        }
+
+        mahasiswa.prototype.display=function(){
+            return "NIM : "+this.NIM
+        }
+
+        function maba(nomor){
+            this.NIM = nomor
+        }
+
+        maba.prototype=Object.create(mahasiswa.prototype)
+        var maba = new maba("M3119033")
+        console.log(maba.display())
+
+        //====Challene Polymorphims
+        class first{
+            run(){
+                console.log("first")
+            }
+        }
+        class second extends first{
+            run(){
+                console.log("second")
+            }
+        }
+        class third extends first{
+            run(){
+                console.log("third")
+            }
+        }
+        let x = new first()
+        let y = new second()
+        let z = new third()
+
+        x.run()
+        y.run()
+        z.run()
+
+        //====Challenge Recursive Function, terus berjalan
+        function urutan(angka){
+            console.log(angka)
+
+            let next = angka+1
+            if(next <= 10){
+                urutan(next)
+            }
+        }
+        urutan(8)
+
+        //==== Challenge Array / List Properties
+        let smartphone = {
+            brand : "Samsung", 
+            color : ["Black", "Gold"]
+        }
+        console.log(smartphone['brand']) //array notation
+        console.log(smartphone.color[0]) //dot notation
+    </script>
+</body>
+</html>

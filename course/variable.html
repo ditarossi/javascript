@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //==============VARIABLE====================
+        console.log("Hello World");
+
+        //var dan let merupakan variable muttable, sedangakn const adalah imuttable
+        //Varibale Var (rawan ketimpa resultnya jika ada variable sama dideklarasikan ulang, bersifat global scope)
+        var angka = 1;
+        console.log(angka);
+
+        //solusi pakai variable let (tidak bisa di deklarasi ulang akan ada error, dan hanya berlaku di dalam scope tertentu)
+        let kata = "baju";
+        console.log(kata);
+        kata = "kursi";
+        console.log(kata);
+
+        //let dalam block scope, tetap mencetak yang di luar scope
+        let greeting="say hello";
+        let time = 4;
+
+        if(time>3){
+            let greeting = "hello goodbye";
+        }
+        //ketika ingin cetak "hello goodbye" maka console dilakukan di dalam block scope
+        console.log(greeting);
+
+        //variable const => tidak dapat diubah, tidak dapat diulang
+        const kalimat = "Nama saya Dita";
+        //kalimat = "Nama saya Fara"; == tidak bisa diubah 
+        console.log(kalimat);
+        //const kalimat = "Nama saya Fara"; == tidak bisa di deklarasi ulang
+        const a = "hello";
+        const x= 3;
+        if(x>2){
+            const a = "bye";
+            console.log(a);
+        }
+        console.log(a);
+
+        for(i=1; i<= 100; i++){
+            if((i%3==0)&&(i%5==0)){
+                console.log("FizzBuzz")
+            } else if (i%3==0){
+                console.log("Fizz")
+            }else if (i%5==0){
+                console.log("Buzz")
+            } else {
+                console.log(i)
+            }
+        }
+    </script>
+</body>
+</html>

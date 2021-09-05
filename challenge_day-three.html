@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        //====Challenge Function as Expression (deklarasi function dengan menggunakan variable)
+        let nama = function(){
+            console.log("Dita Rossiyana")
+        }
+        nama();
+
+        //===Challenge Captalize Sentence====
+        let alamat = "Teras, Boyolali";
+        console.log(alamat.toUpperCase());
+
+        //====Challenge Fibbonachi Number====
+        let Fibbonachi = function(){
+            let num=8;
+            let bil1=0;
+            let bil2=1;
+            let next=0;
+
+            for(let i=0; i<num; i++){
+                    if(i<=1){
+                        next=i;
+                    } else {
+                        next=bil1+bil2;
+                        bil1=bil2;
+                        bil2=next;
+                    }
+                }
+                console.log(next);
+            }
+        Fibbonachi();
+
+        //===Challenge Palindrome==== 
+        let palindrome = function(){
+            var str= "katak";
+            var len= str.length;
+            var mid = Math.floor(len/2);
+
+            for(var i=0;i<mid;i++){
+                if(str[i] !== str[len - 1 -i]){
+                    console.log("Bukan Palindrome");
+                } else{
+                    console.log("palindrome");
+                }            
+            } 
+        }
+
+        palindrome();
+
+        //====Challenge Random String Based On Value Of Argument====
+        let getValue = function(len){
+            let value = ""
+            let Argument = "Saya sedang belajar"
+            let Argumentlen = Argument.length
+
+            for (let i = 0; i <= len; i++){
+                value += Argument.charAt(Math.floor(Math.random() * 
+                Argumentlen));
+            }
+            return value
+        }
+        console.log(getValue(2))
+    </script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+    //function declaration
+        hello();
+
+        function hello(){
+            this.world=1; //global scope
+            setInterval(function bigger(){
+                this.world++;
+            }, 1000)
+        }
+
+    //function expression, tidak bisa dipanggil di atas blok code
+    const barang = function(){
+        this.world="world"; //global scope
+        console.log("Perabotan Rumah Tangga");
+    }
+    barang();
+
+    //arrow function (bentuk singkat dari function expression)
+    const buah = ()=>{
+        console.log("Mangga")
+    }
+    buah()
+
+    age=20;
+    function Person(){
+        this.age=10;
+        const x = ()=> { //kalau pakai function expression, maka langsung merujuk ke upperscope
+            console.log(this.age);
+        }
+        x();
+    }
+
+    const me = new Person()
+    console.log(this.age) //meruju pada upperscope
+
+    //function parameter suatu function yang hasilnya sesuai dengan parameter yang diinputkan
+    function tambah(a,b){
+        return a+b;
+    }
+    const jumlah = tambah(10,2)
+    const jumlahlagi = tambah(10,20)
+    console.log(jumlah)
+    console.log(jumlahlagi)
+
+    //function default parameter (memberikan nilai di awal)
+    function calc(angka1, angka2, operator="+"){
+        return eval(angka1+operator+angka2)
+    }
+
+    const penjumlahan = calc(6,3)
+    const pengurangan = calc(6,3,"-") //mengganti value paramter operator
+    console.log(penjumlahan)
+    console.log(pengurangan)
+
+    //function rest paramter (digunakan untuk mengganti parameter terakhir menjadi sebuah arrar)
+    function sum(...number){ //kalau semisal di depan ada parameter a, maka urutan 1 pada array tidak diikutkan
+        return number.reduce((a,b) => a+b,0)
+    }
+
+    const jumlahkan = sum (1,2,3,4,5,6,7,8)
+    console.log(jumlahkan)
+
+
+    </script>
+</body>
+</html>
